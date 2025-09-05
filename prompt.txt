@@ -1,0 +1,75 @@
+Build a Pomodoro Timer web application with the following specifications:
+Project Structure
+Create these files only:
+
+index.html (single page app)
+style.css (clean, modern styling)
+script.js (all functionality)
+README.md (basic setup and usage instructions)
+
+Core Features (MUST HAVE)
+
+Timer display showing minutes:seconds
+Start/Pause button that toggles
+Reset button to return to default time
+Settings button (⚙️) to configure custom timer durations
+Default intervals: 25 min work, 5 min short break, 15 min long break (all customizable)
+Visual indicator of current mode (Work/Break)
+Simple notification sound when timer completes
+Settings modal with form inputs to customize each timer mode:
+
+Work Session: 1-60 minutes
+Short Break: 1-30 minutes
+Long Break: 1-60 minutes
+Save Settings button to apply changes
+Reset to Defaults button (restores 25/5/15)
+
+
+
+Constraints (IMPORTANT - keeps build time manageable)
+
+NO external dependencies or frameworks - vanilla JS only
+NO backend or database - everything client-side
+NO complex animations - just clean transitions
+NO user authentication or profiles
+NO task management features - timer only
+Use system default fonts (no custom fonts)
+Single color theme only (your choice, but keep it simple)
+Desktop-first design (mobile responsive is nice-to-have, not required)
+
+Styling Guidelines
+
+Minimalist design with good contrast
+Centered layout, max-width 400px
+Large, readable timer display
+Clear, clickable buttons (at least 44px touch targets)
+Use CSS variables for colors to make theming easy later
+Modal overlay for settings with backdrop blur effect
+Form inputs with clear labels and descriptions
+
+Code Requirements
+
+Use modern ES6+ JavaScript (const/let, arrow functions)
+Add comments for main functions
+Use semantic HTML5 elements
+Keep all JS in one file for simplicity
+Store custom settings in localStorage separately from timer state
+Settings should persist across sessions
+
+Nice-to-Have (ONLY if time permits)
+
+Keyboard shortcuts (Space for start/pause, R for reset, S for settings)
+Escape key to close settings modal
+Browser tab title updates with timer
+Local storage to remember timer state on refresh
+Click outside modal to close it
+Mode buttons dynamically show custom times
+
+Deployment Ready
+
+Ensure it works directly by opening index.html
+Test that GitHub Pages will serve it correctly
+Include deployment instructions in README
+Document how to customize timer durations (both through UI and code)
+
+Focus on getting a working version first, then enhance if time allows. Prioritize functionality over perfect styling. The settings feature should integrate seamlessly with the timer without disrupting the core functionality.

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Pomodoro Timer</h1>
+        </header>
+        
+        <section class="timer-section">
+            <div class="mode-indicator">
+                <span id="current-mode">Work Session</span>
+            </div>
+            
+            <div class="timer-display">
+                <span id="timer">25:00</span>
+            </div>
+            
+            <div class="timer-controls">
+                <button id="start-pause-btn" class="btn btn-primary">Start</button>
+                <button id="reset-btn" class="btn btn-secondary">Reset</button>
+                <button id="settings-btn" class="btn btn-settings" title="Settings">⚙️</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2>Timer Settings</h2>
+                <button id="close-modal" class="close-btn" aria-label="Close settings">&times;</button>
+            </header>
+            
+            <form id="settings-form" class="modal-body">
+                <div class="form-group">
+                    <label for="work-duration">
+                        Work Session Duration
+                        <span class="form-description">(1-60 minutes)</span>
+                    </label>
+                    <input type="number" id="work-duration" min="1" max="60" value="25">
+                    <span class="unit">minutes</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="short-break-duration">
+                        Short Break Duration
+                        <span class="form-description">(1-30 minutes)</span>
+                    </label>
+                    <input type="number" id="short-break-duration" min="1" max="30" value="5">
+                    <span class="unit">minutes</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="long-break-duration">
+                        Long Break Duration
+                        <span class="form-description">(1-60 minutes)</span>
+                    </label>
+                    <input type="number" id="long-break-duration" min="1" max="60" value="15">
+                    <span class="unit">minutes</span>
+                </div>
+            </form>
+            
+            <footer class="modal-footer">
+                <button id="save-settings" class="btn btn-primary">Save Settings</button>
+                <button id="reset-defaults" class="btn btn-secondary">Reset to Defaults</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
